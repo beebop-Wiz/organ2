@@ -1,0 +1,8 @@
+#include <pthread.h>
+#include "thread_audio.h"
+#include "thread.h"
+#include "event.h"
+
+#include <stdio.h>
+#include <jack/jack.h>
+#include <jack/midiport.h>

@@ -1,0 +1,11 @@
+#include "thread.h"
+#include "thread_iface.h"
+
+void ti_evcb(struct event evt) {
+  switch(evt.type) {
+  case E_INIT:
+    printf("[Iface] Initializing...\n");
+    printf("[Iface] Initialized.\n");
+    break;
+  }
+}

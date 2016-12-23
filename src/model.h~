@@ -1,0 +1,15 @@
+#ifndef MODEL_H
+#define MODEL_H
+
+#include "division.h"
+
+struct model {
+  struct division_list *divisions;
+};
+
+struct division_list {
+  struct division *d;
+  int midich;
+};
+
+#endif

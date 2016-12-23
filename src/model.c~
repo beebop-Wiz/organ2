@@ -1,0 +1,5 @@
+#include "model.h"
+
+struct model *create_model() {
+  return calloc(1, sizeof(struct model));
+}
