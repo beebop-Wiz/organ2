@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <pthread.h>
 #include "thread.h"
 #include "thread_audio.h"
@@ -12,4 +13,5 @@ int main(void) {
   t_iface = thread_create(ti_evcb);
   thread_signal(t_audio, ecreate(E_INIT, 0));
   sleep(-1);
+  return 0;
 }

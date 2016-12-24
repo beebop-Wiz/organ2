@@ -18,7 +18,21 @@ void add_division(struct model *m, struct division *nd) {
   d->next = calloc(1, sizeof(struct division_list));
 }
 
-void m_proc_midi(struct model *m) {
-  
+void m_proc_midi(struct model *m, jack_midi_event_t e) {
+  struct division_list *d = m->divisions;
+  while(d->next) {
+    d_proc_midi(d->d, e);
+    d = d->next;
+  }
+}
+
+double m_advance(struct model *m) {
+  struct division_list *d = m->divisions;
+  double r = 0;
+  while(d->next) {
+    r += d_advance(d->d);
+    d = d->next;
+  }
+  return r;
 }
 

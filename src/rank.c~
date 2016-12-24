@@ -1,0 +1,5 @@
+#include <stdio.h>
+#include "rank.h"
+
+void r_read(struct rank *r, FILE *f) {
+}
