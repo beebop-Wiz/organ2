@@ -15,7 +15,7 @@ struct harm_val {
 };
 
 struct rank {
-  float h_phase[N_NOTE][N_HARM];
+  unsigned int h_phase[N_NOTE][N_HARM];
   float v_env[N_NOTE];
   int fn, fd;
 
